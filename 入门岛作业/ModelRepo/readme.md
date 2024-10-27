@@ -102,6 +102,38 @@ curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.s
 git lfs install # 直接在git环境下配置git LFS
 ```
 
+**上传模型到ModelScope**
+
+首先需要下载依赖
+
+```bash
+pip install modelscope
+```
+
+在modelscope平台上创建自己的模型，然后将模型克隆到本地
+
+实例不上传模型，只做readme.md的测试
+
+将下面的内容粘贴到readme.md中
+
+```md
+# 书生浦语大模型实战营camp4
+- hugging face模型上传测试
+- 更多内容请访问 https://github.com/InternLM/Tutorial/tree/camp4
+```
+
+然后将修改后的项目push到ModelScope上
+
+```bash
+git add .
+git commit -m "add:intern_study_L0_4"
+git push <remote url>
+```
+
+最后就可以在modelscope中看到自己的模型了
+
+![](./img/11.png)
+
 ## 在HF平台上使用Spaces并把intern_cobuild部署成功
 
 在GitHubSpace中使用Jupyter Notebook模板创建一个自己的Space
